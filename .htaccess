@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteRule ^logout/$ /index.php?page=logout [L]
+RewriteRule ^home/$ /index.php?page=home [L]
+RewriteRule ^articles/$ /index.php?page=articles-index [L]
+RewriteRule ^article/(.*)$ /index.php?page=article&ID=$1 [L]
+RewriteRule ^signup/$ /index.php?page=signup [L]

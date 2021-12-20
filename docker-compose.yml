@@ -1,0 +1,22 @@
+---
+version: "3"
+services:
+    php:
+        # image: "becodeorg/php"
+        build: "./"
+        volumes:
+            - "./:/var/www/html"
+        ports:
+            - "80:80"
+    mysql:
+        image: "mariadb"
+        restart: "unless-stopped"
+        volumes:
+            - "mysql_db:/var/lib/mysql"
+        ports:
+            - "3306:3306"
+            - "33060:33060"
+        environment:
+            MYSQL_ROOT_PASSWORD: "root"
+volumes:
+    mysql_db:

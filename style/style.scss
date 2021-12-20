@@ -1,0 +1,67 @@
+@import "reset";
+a,
+button {
+    cursor: pointer;
+}
+a {
+    text-decoration: underline;
+}
+button {
+    border: 2px solid purple;
+    padding: 0.5rem;
+    font-weight: bold;
+}
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    display: grid;
+    grid-template-rows: max-content auto max-content;
+}
+header {
+    background-color: darkgrey;
+}
+.menu ul {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    a {
+        color: purple;
+    }
+    .last {
+        margin-left: auto;
+        margin-right: 1rem;
+    }
+}
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    h1 {
+        flex-shrink: 0;
+    }
+}
+
+h1 {
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+.limit {
+    max-width: 600px;
+    margin: 0 auto;
+    border-left: 1px dashed black;
+    border-right: 1px dashed black;
+}
+div.limit {
+    padding: 1rem;
+}
+form {
+    padding: 1rem;
+}
+.controls {
+    display: flex;
+    & > h1 {
+        flex-grow: 1;
+    }
+}
